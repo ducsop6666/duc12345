@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thư gửi cậu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: 'Dancing Script', cursive;
+      background: linear-gradient(135deg, #ffe1e8, #e0f7fa, #fffde7, #e1f5fe);
+      background-size: 400% 400%;
+      animation: gradientFlow 20s ease infinite;
+      min-height: 100vh;
+      overflow-y: auto;
+    }
+
+    @keyframes gradientFlow {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .container {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    .letter {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 20px;
+      padding: 2rem;
+      margin-top: 2rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      display: none;
+      animation: fadeIn 1.2s ease forwards;
+      white-space: pre-line;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .open-button {
+      background-color: #ffd3b6;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.3rem;
+      font-weight: bold;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      color: #6b4c3b;
+    }
+
+    .open-button:hover {
+      background-color: #ffc2a1;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <button class="open-button" onclick="openLetter()">📩 Mở thư</button>
+    <div id="letter" class="letter">
+      <p><strong>Mến gửi cậu,</strong></p>
+
+      <p>Giữa những chông chênh bộn bề, chúng ta gặp nhau.<br>
+      Được lắng nghe câu chuyện của cậu là một điều may mắn với Mốc.<br>
+      Qua từng dòng cảm xúc cậu chia sẻ, tớ thấy một cậu vẫn đang loay hoay giữa những xúc cảm lưng chừng – và tớ trân quý tất cả những điều đó, dù chúng còn chưa thành hình.</p>
+
+      <p>Có thể trải bài hôm nay chưa mang đến một đáp án trọn vẹn,<br>
+      nhưng tớ hy vọng – ít nhất, cậu đã cảm thấy có ai đó thật lòng lắng nghe.<br>
+      Và nếu cậu thấy lòng mình nhẹ đi dù chỉ một chút thôi,<br>
+      Mốc mong rằng vũ trụ sẽ dịu dàng dẫn lối cho lần gặp tiếp theo của chúng ta.</p>
+
+      <p>Mong rằng sau này khi mây đen kéo đến,<br>
+      cậu có người che ô chung, đi qua giông bão, trong lòng vẫn ôm ấp vạt nắng.</p>
+    </div>
+  </div>
+
+  <script>
+    function openLetter() {
+      document.getElementById("letter").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
